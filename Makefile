@@ -22,6 +22,7 @@ SRC = push_swap.c \
 	  sorting/chunk.c \
 	  sorting/radix.c \
 	  sorting/adaptive.c \
+	  sorting/index.c\
 	  ops/ops_init.c \
 	  ops/ops_core.c \
       parsing/validation.c

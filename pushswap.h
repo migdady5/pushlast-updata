@@ -9,6 +9,7 @@
 typedef struct s_node
 {
 	int				data;
+	int				index;
 	struct s_node	*next;
 }	t_node;
 
@@ -26,6 +27,7 @@ char	*copy_word(char *s, int *i);
 
 t_node	*build_stack_a(int *arr, int n);
 void	free_stack(t_node *stack);
+void	index_stack(t_node *a);
 int		is_sorted(t_node *stack);
 int		stack_size(t_node *stack);
 t_node	*stack_last(t_node *stack);

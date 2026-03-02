@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: tmeqdad <toqa.meqdad@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 19:28:04 by amigdadi          #+#    #+#             */
-/*   Updated: 2026/02/27 00:53:19 by amigdadi         ###   ########.fr       */
+/*   Updated: 2026/03/02 16:27:50 by tmeqdad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int	main(int ac, char **av)
 
 	a = build_stack_a(arr, num_count);
 	free(arr);
+	
+	index_stack(a);
 
 	if (a && !is_sorted(a))
     sort(&a, &b, &ops, (int)mode);
