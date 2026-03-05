@@ -14,34 +14,40 @@
 
 void	ra(t_node **a, t_ops *ops)
 {
+	if (!a || !*a || !(*a)->next)
+		return ;
+	rotate_core(a);
 	if (ops)
 	{
 		ops->ra++;
 		ops->total++;
 	}
-	rotate_core(a);
 	write(1, "ra\n", 3);
 }
 
 void	rb(t_node **b, t_ops *ops)
 {
+	if (!b || !*b || !(*b)->next)
+		return ;
+	rotate_core(b);
 	if (ops)
 	{
 		ops->rb++;
 		ops->total++;
 	}
-	rotate_core(b);
 	write(1, "rb\n", 3);
 }
 
 void	rr(t_node **a, t_node **b, t_ops *ops)
 {
+	if (!a || !*a || !(*a)->next || !b || !*b || !(*b)->next)
+		return ;
+	rotate_core(a);
+	rotate_core(b);
 	if (ops)
 	{
 		ops->rr++;
 		ops->total++;
 	}
-	rotate_core(a);
-	rotate_core(b);
 	write(1, "rr\n", 3);
 }

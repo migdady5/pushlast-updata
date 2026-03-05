@@ -8,6 +8,7 @@ SRC = push_swap.c \
       operator2.c \
       operator3.c \
       disorder.c \
+      bench.c \
       stack_building/build_stack.c \
       stack_building/build_stack_utils.c \
       parsing/collect_tokens.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   chunk.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmeqdad <toqa.meqdad@learner.42.tech>      +#+  +:+       +#+        */
+/*   By: amigdadi <amigdadi@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 21:50:36 by tmeqdad           #+#    #+#             */
-/*   Updated: 2026/03/02 22:44:45 by tmeqdad          ###   ########.fr       */
+/*   Updated: 2026/03/05 17:50:28 by amigdadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,18 @@ static void	push_back_to_a(t_node **a, t_node **b, t_ops *ops)
 void	chunk_sort(t_node **a, t_node **b, t_ops *ops)
 {
    int	n;
+   int	chunks;
    int	chunk_size;
    int	range_max;
 
    if (is_sorted(*a))
 		return ;
+
+	index_stack(*a);
+
 	n = stack_size(*a);
-	if (n <= 100)
-		chunk_size = 15;
-	else
-		chunk_size = 35;
+	chunks = (n <= 100) ? 5 : 11;
+	chunk_size = n / chunks;
 	range_max = chunk_size;
 	while (*a)
 	{
