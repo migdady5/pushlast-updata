@@ -51,8 +51,8 @@ static void	push_back_to_a(t_node **a, t_node **b, t_ops *ops)
 		{
 			while ((*b)->index != max)
 				rrb(b, ops);
-			pa(a, b, ops);
 		}
+			pa(a, b, ops);
 	}
 }
 
