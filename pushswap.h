@@ -72,6 +72,8 @@ void	simple_min_extract(t_node **a, t_node **b, t_ops *ops);
 void	chunk_sort(t_node **a, t_node **b, t_ops *ops);
 void	radix_sort(t_node **a, t_node **b, t_ops *ops);
 void	adaptive_sort(t_node **a, t_node **b, t_ops *ops);
+void	print_bench(t_ops *ops, double disorder, const char *strategy,
+		const char *complexity);
 
 /* operations */
 void	ops_init(t_ops *ops);
